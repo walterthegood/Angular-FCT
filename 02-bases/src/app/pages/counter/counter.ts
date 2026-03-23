@@ -1,9 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-counter',
   styleUrl: './counter.css',
-  templateUrl: './counter.html'
+  templateUrl: './counter.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+
 })
 export class Counter {
 
@@ -25,5 +27,13 @@ export class Counter {
     this.counterSingal.set(1);
   }
 
+  constructor() {
+
+    setInterval(() => {
+      //this.counter = this.counter + 1;
+      this.counterSingal.update((current) => current + 1);
+      console.log('Tick');
+    }, 2000);
+  }
 
 }
