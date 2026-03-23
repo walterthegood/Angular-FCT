@@ -11,16 +11,9 @@
     <dd>{{ getHeroDescription() }}</dd>
 
     <td>Capitalizado:</td>
-    <!-- ! Intentar  -->
-    <!-- <dd> {{ 'Mostrar nombre TODO EN MAYÚSCULAS' }} </dd> -->
+    <dd> {{ name().toUpperCase() }} </dd>
 </dl>
 
-<button (click)="changeHero()" class="btn btn-primary mx-2">
-    Cambiar nombre
-</button>
-
-<button (click)="upperCaseName()" class="btn btn-secondary">Nombre en Mayusculas</button>
-
-<button (click)="changeAge()" class="btn btn-primary">Cambiar edad</button>
-
+<button (click)="changeHero()" class="btn btn-primary mx-2">Cambiar nombre</button>
+<button (click)="changeAge()" class="btn btn-success">Cambiar edad</button>
 <button (click)="resetForm()" class="btn btn-primary mx-2">Reset</button>

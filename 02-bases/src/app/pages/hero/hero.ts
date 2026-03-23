@@ -21,10 +21,6 @@ export class HeroPage {
         this.age.set(22);
     }
 
-    upperCaseName() {
-        this.name.update(name => name.toUpperCase());
-    }
-
     changeAge() {
         this.age.set(60);
     }
