@@ -19,28 +19,8 @@ export class DragonballSuper {
     { id: 2, name: 'Vegeta', powerLevel: 8500 },
   ]);
 
-  addCharacter() {
-
-    if (!this.name() || !this.powerLevel() || this.powerLevel() <= 0) {
-      alert('Pon un nombre y un nivel de poder válido');
-      return;
-    }
-
-    const newCharacter: Character = {
-      id: 100,
-      name: this.name(),
-      powerLevel: this.powerLevel(),
-    };
-    
-      
-    //this.characters.update((list) => [...list, newCharacter]);    
-    console.log(newCharacter);
-    this.resetFields();
-  }
-
-  resetFields() {
-    this.name.set('');
-    this.powerLevel.set(0);
+  addCharacter(character: Character) {
+    this.characters.update((list) => [...list, character]);
   }
 
 
